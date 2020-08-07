@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Toronto Community Network</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="notice.html"><strong aria-hidden="true">1.</strong> Notice</a></li><li class="chapter-item expanded "><a href="network/supernode1.html"><strong aria-hidden="true">2.</strong> Supernode 1</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Toronto Community Network</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#notice" id="notice">Notice</a></h1>
+<p>This documentation is still in progress. Come help <a href="https://github.com/tomeshnet/toronto-community-network-docs">here</a>!</p>
+<h1><a class="header" href="#supernode-1" id="supernode-1">Supernode 1</a></h1>
+<p><img src="network/images/supernode1-view.jpg" alt="image" /></p>
+<p>Supernode 1 is located on top of 200 Woolner Ave, Toronto. The supernode was deployed along side a Cisco deployed infrastructure belonging to the City of Toronto.</p>
+<h2><a class="header" href="#network" id="network">Network</a></h2>
+<p>The supernode consists of 2 antennas and a router. The router is connected to the Cisco switch which is connected to the Bell 2000 modem that offers internet access for use as a gateway path.</p>
+<p>The router acts as a Babel routing device. The antennas are configured in bridge mode.</p>
+<p><img src="network/images/supernode1-network-layout.png" alt="image" /></p>
+<h2><a class="header" href="#hardware" id="hardware">Hardware</a></h2>
+<h3><a class="header" href="#antenna-1" id="antenna-1">Antenna 1</a></h3>
+<p>Antenna 1 is an Ubiquiti LAP-120 mounted on the West arm of the building, on the south side of the roof, colocated with Cisco on their mounts. The antenna is facing south.</p>
+<p><img src="network/images/supernode1-hardware-antenna1.jpg" alt="image" /></p>
+<h3><a class="header" href="#antenna-2" id="antenna-2">Antenna 2</a></h3>
+<p>Antenna 2 is an Ubiquiti LAP-120 mounted on the south arm of the building, on the east side of the roof, colocated with Cisco on their mounts. The antenna is facing east.</p>
+<p><img src="network/images/supernode1-hardware-antenna2.jpg" alt="image" /></p>
+<h3><a class="header" href="#router-1" id="router-1">Router 1</a></h3>
+<p>Router 1 is a Ubiquti EdgeRouter X-SFP mounted inside the Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.</p>
+<p>Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.</p>
+<p><img src="network/images/supernode1-hardware-cabinet2.jpg" alt="image" /></p>
+<h2><a class="header" href="#physical-environment" id="physical-environment">Physical Environment</a></h2>
+<p>The roof is accessible through ceiling hatches on the top floor of the building.</p>
+<p><img src="network/images/supernode1-access-roof.jpg" alt="image" /></p>
+<p>The router is installed in a black metal cabinet, located on the back wall of the ballast tank room on the roof. This room is accessible only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter then normal.</p>
+<p>Network cables are run through a hole in the east wall.</p>
+<p><img src="network/images/supernode1-access-ballast.jpg" alt="image" />
+<img src="network/images/supernode1-hardware-cabinet.jpg" alt="image" /></p>
+<h2><a class="header" href="#neighborhood--testing" id="neighborhood--testing">Neighborhood  Testing</a></h2>
+<p>Testing was done at several points that had line-of-sight to the antenna. The antenna was hand-held, not tuned precisely. Results are for reference only, and do not necessarily represent what a permanent deployment could attain at that distance.</p>
+<table><thead><tr><th>Point</th><th>Distance (m)</th><th>Ping</th><th>Speed RX/TX (mbps)</th><th>Signal (dBm)</th></tr></thead><tbody>
+<tr><td>a</td><td>200m</td><td>4.57</td><td>86/194Mbps</td><td>-64</td></tr>
+<tr><td>b</td><td>200m</td><td>2.86</td><td>80/194Mbps</td><td>-60</td></tr>
+<tr><td>c</td><td>237m</td><td>5.82</td><td>50/178Mbps</td><td>-58</td></tr>
+<tr><td>d</td><td>270m</td><td>5.27</td><td>103/149Mbps</td><td>-50</td></tr>
+<tr><td>e (1)</td><td>396m</td><td>5.11</td><td>83/172Mbps</td><td>-58</td></tr>
+<tr><td>f</td><td>2520m</td><td>4.57</td><td>8.68/1.6Mbps</td><td>-81</td></tr>
+<tr><td>f (2)</td><td>2520m</td><td>4.57</td><td>64.58/40.79Mbps</td><td>-74</td></tr>
+</tbody></table>
+<p>(1) Used both Loco AC and LiteBeam AC. Both performed the same.<br />
+(2) Second attempt done after corrected issue with sn1a2.</p>
+<h2><a class="header" href="#additional-notes" id="additional-notes">Additional notes</a></h2>
+<p>EdgeRouter X-SFP does not accelerate traffic over tunnels. Due to this, speeds are currently limited to around 400Mbps to exit node.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
