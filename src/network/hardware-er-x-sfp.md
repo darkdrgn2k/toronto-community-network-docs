@@ -13,6 +13,12 @@ To apply the config use `commit` and then to save it perminantly use `save`
 set system host-name SN1R1
 ```
 
+## Enable Hardware Acceleration
+
+```
+set system offload hwnat enable
+```
+
 ## Ethernet ports
 
 Delete the default DHCP configuration on `ETH1`.
